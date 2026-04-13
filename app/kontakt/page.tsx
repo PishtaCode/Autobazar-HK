@@ -60,7 +60,7 @@ export default function KontaktPage() {
                     <div className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">
                       {item.label}
                     </div>
-                    {"hours" in item ? (
+                    {"hours" in item && item.hours ? (
                       <div className="grid grid-cols-2 gap-x-4 gap-y-0.5">
                         {item.hours.map(({ day, time }) => (
                           <Fragment key={day}>
