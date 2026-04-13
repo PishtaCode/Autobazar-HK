@@ -14,7 +14,7 @@ export default function FeaturedCars({ cars }: FeaturedCarsProps) {
   const featured = cars.slice(0, 6);
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-12 md:py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -22,7 +22,7 @@ export default function FeaturedCars({ cars }: FeaturedCarsProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4"
+          className="flex flex-col sm:flex-row sm:items-end justify-between mb-6 md:mb-10 gap-3"
         >
           <div>
             <p className="text-orange-600 text-sm font-semibold uppercase tracking-wider mb-2">

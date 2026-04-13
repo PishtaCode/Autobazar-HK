@@ -45,8 +45,8 @@ const info = [
 export default function KontaktPage() {
   return (
     <div className="bg-gray-50 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 md:gap-8">
           {/* Contact info */}
           <div className="lg:col-span-2 flex flex-col gap-4">
             {info.map((item, idx) => {
@@ -91,14 +91,14 @@ export default function KontaktPage() {
         </div>
 
         {/* Mapa + Street View vedle sebe */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mt-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 md:gap-8 mt-4 md:mt-8">
           <div className="lg:col-span-2 bg-white rounded-2xl border border-gray-100 shadow-sm p-4">
             <p className="text-sm font-semibold text-gray-700 mb-3">Kde nás najdete</p>
-            <MapEmbed className="h-80" />
+            <MapEmbed className="h-56 md:h-80" />
           </div>
           <div className="lg:col-span-3 bg-white rounded-2xl border border-gray-100 shadow-sm p-4">
             <p className="text-sm font-semibold text-gray-700 mb-3">Pohled z ulice</p>
-            <div className="rounded-xl overflow-hidden border border-gray-200 h-80">
+            <div className="rounded-xl overflow-hidden border border-gray-200 h-56 md:h-80">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!4v1680000000000!6m8!1m7!1s0iiWHntjG7CN0tWbnoz7eA!2m2!1d50.2000957!2d15.8446989!3f153.12!4f5.55!5f90"
                 width="100%"

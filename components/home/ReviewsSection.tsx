@@ -36,14 +36,14 @@ function Stars({ count }: { count: number }) {
 
 export default function ReviewsSection() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-12 md:py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="text-center mb-8 md:mb-12"
         >
           <p className="text-orange-600 text-sm font-semibold uppercase tracking-wider mb-2">
             Recenze zákazníků
@@ -69,7 +69,7 @@ export default function ReviewsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm flex flex-col"
+              className="bg-white rounded-2xl p-4 md:p-6 border border-gray-100 shadow-sm flex flex-col"
             >
               <Stars count={review.rating} />
               <p className="text-gray-700 text-sm leading-relaxed mt-4 mb-5 flex-1">
