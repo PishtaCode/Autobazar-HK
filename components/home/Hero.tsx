@@ -13,7 +13,7 @@ export default function Hero() {
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1643142311296-304953706775?w=1600&q=80')",
-          backgroundSize: "140%",
+          backgroundSize: "cover",
           backgroundPosition: "center 60%",
         }}
       />
