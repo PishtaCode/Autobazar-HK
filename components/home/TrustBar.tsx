@@ -11,7 +11,7 @@ export default function TrustBar() {
     { icon: Award, value: "25+", label: t("yearsLabel"), desc: t("yearsDesc") },
     { icon: Car, value: "500+", label: t("carsLabel"), desc: t("carsDesc") },
     { icon: Shield, value: "100%", label: t("qualityLabel"), desc: t("qualityDesc") },
-    { icon: ThumbsUp, value: "4.2★", label: t("ratingLabel"), desc: t("ratingDesc") },
+    { icon: ThumbsUp, value: "4.8★", label: t("ratingLabel"), desc: t("ratingDesc") },
   ];
 
   return (

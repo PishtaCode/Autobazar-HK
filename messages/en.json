@@ -44,7 +44,7 @@
   "reviews": {
     "label": "Customer reviews",
     "title": "What our customers say",
-    "source": "Google reviews"
+    "source": "firmy.cz reviews"
   },
   "featuredCars": {
     "label": "Current inventory",

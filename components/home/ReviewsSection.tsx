@@ -6,22 +6,22 @@ import { Star } from "lucide-react";
 
 const reviews = [
   {
+    name: "Hojdova K",
+    date: "25. března 2026",
+    rating: 5,
+    text: "Nejlepší prodejce, velmi milý a seriózní pan majitel, cesta 300km pro inzerované vozidlo se mi vyplatilo, jsem velmi spokojená.",
+  },
+  {
+    name: "baron Erno",
+    date: "26. dubna 2025",
+    rating: 5,
+    text: "Vše naprosto super vřele doporučuji.",
+  },
+  {
     name: "Lenka Dostálová",
     date: "před 5 lety",
     rating: 5,
-    text: "S koupí auta i se samotným autem jsem moc spokojená :) Pan Vaněk je vstřícný a ochotný člověk, který nabízí hezké kousky ve svém autobazaru. *****",
-  },
-  {
-    name: "Jana Klicnarova",
-    date: "před 4 lety",
-    rating: 5,
-    text: "Rychlé jednání a skvělý přístup k zákazníkovi",
-  },
-  {
-    name: "Pavel Klíma",
-    date: "před rokem",
-    rating: 5,
-    text: "Ochotný příjemné jednání",
+    text: "S koupí auta i se samotným autem jsem moc spokojená :) Pan Vaněk je vstřícný a ochotný člověk, který nabízí hezké kousky ve svém autobazaru.",
   },
 ];
 
@@ -58,7 +58,7 @@ export default function ReviewsSection() {
                 <Star key={i} size={16} className="fill-orange-400 text-orange-400" />
               ))}
             </div>
-            <span>4.2 / 5 · {t("source")}</span>
+            <span>4.8 / 5 · {t("source")}</span>
           </div>
         </motion.div>
 
