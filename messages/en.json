@@ -1,0 +1,143 @@
+{
+  "nav": {
+    "home": "Home",
+    "cars": "Car Inventory",
+    "about": "About Us",
+    "contact": "Contact Us"
+  },
+  "footer": {
+    "navTitle": "Navigation",
+    "contactTitle": "Contact",
+    "home": "Home",
+    "cars": "Car Inventory",
+    "about": "About Us",
+    "contact": "Contact",
+    "copyright": "© 2025 Autobazar HK, s.r.o. All rights reserved."
+  },
+  "hero": {
+    "badge": "Certified Dealer · Hradec Králové",
+    "titleStart": "Quality Cars for",
+    "titleHighlight": "the Whole Family",
+    "description": "Family-run car dealership in Hradec Králové with over 25 years of experience. Every vehicle undergoes thorough technical inspection. Buy with confidence.",
+    "guarantee": "Warranty on every car · Service history · Personal approach",
+    "ctaPrimary": "Browse Inventory",
+    "ctaSecondary": "Contact Us"
+  },
+  "trustBar": {
+    "yearsLabel": "years in business",
+    "yearsDesc": "Experience & tradition",
+    "carsLabel": "cars sold",
+    "carsDesc": "Happy customers",
+    "qualityLabel": "quality guarantee",
+    "qualityDesc": "On every vehicle",
+    "ratingLabel": "rating",
+    "ratingDesc": "Google reviews"
+  },
+  "aboutTeaser": {
+    "description": "We are a family-run business with over 25 years of experience in used car sales. We pride ourselves on honesty, transparency, and long-term customer relationships. Every car we sell, we would buy for our own family.",
+    "highlight1": "Personal approach to every customer",
+    "highlight2": "Thorough technical inspection of every vehicle",
+    "highlight3": "Transparent pricing with no hidden fees",
+    "highlight4": "Help with financing and insurance",
+    "link": "More about us"
+  },
+  "reviews": {
+    "label": "Customer reviews",
+    "title": "What our customers say",
+    "source": "Google reviews"
+  },
+  "featuredCars": {
+    "label": "Current inventory",
+    "title": "Featured vehicles",
+    "viewAll": "Full inventory",
+    "cta": "View all vehicles"
+  },
+  "carCard": {
+    "viewDetail": "View details"
+  },
+  "carGrid": {
+    "found": "Found {count} vehicles",
+    "noResults": "No vehicles match the filters",
+    "noResultsHint": "Try adjusting your search criteria",
+    "loadMore": "Load more ({count} remaining)"
+  },
+  "filterBar": {
+    "title": "Filters",
+    "reset": "Clear filters",
+    "allBrands": "All brands",
+    "year": "Year",
+    "priceFrom": "Price from (CZK)",
+    "priceTo": "Price to (CZK)",
+    "mileage": "Mileage up to..."
+  },
+  "contactForm": {
+    "title": "Contact form",
+    "name": "Full name",
+    "nameRequired": "Please enter your name",
+    "email": "Email",
+    "emailInvalid": "Invalid email address",
+    "phone": "Phone",
+    "message": "Message",
+    "messageRequired": "Message must be at least 10 characters",
+    "namePlaceholder": "John Smith",
+    "emailPlaceholder": "john@email.com",
+    "phonePlaceholder": "+420 123 456 789",
+    "messagePlaceholder": "Which car are you interested in? Or write us any question...",
+    "submit": "Send message",
+    "submitting": "Sending...",
+    "successTitle": "Message sent!",
+    "successDesc": "We will get back to you soon. We usually respond within 24 hours.",
+    "sendAnother": "Send another message",
+    "errorMsg": "Failed to send message. Please try again or contact us by phone."
+  },
+  "contactPage": {
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Opening hours",
+    "appointmentOnly": "By phone appointment only!",
+    "closed": "Closed",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "mapTitle": "Find us",
+    "streetViewTitle": "Street view"
+  },
+  "aboutPage": {
+    "heroTitle": "Autobazar HK",
+    "storyTitle": "Who we are",
+    "story1": "I have been selling cars for over 25 years and have sold hundreds of vehicles to customers across the Czech Republic and Europe.",
+    "story2": "I approach every customer the way I would want to be treated myself. I inspect each car thoroughly, tell you everything I know, and I don't try to sell at any cost. Many people come back to me again or send a friend, and that tells me I'm doing things right.",
+    "story3": "You can find me at Františka Halase 2196 in Hradec Králové. Stop by anytime or give us a call to arrange a visit.",
+    "valuesLabel": "Our values",
+    "valuesTitle": "Why choose us",
+    "value1Title": "Personal approach",
+    "value1Desc": "We're not a large chain. You deal directly with the owner who will tell you everything straight.",
+    "value2Title": "No surprises",
+    "value2Desc": "The price is the price. We inspect every car before sale and you get a full history report.",
+    "value3Title": "Cars we stand behind",
+    "value3Desc": "We don't sell anything we would doubt ourselves. If a car isn't right, we simply don't offer it.",
+    "value4Title": "Happy customers return",
+    "value4Desc": "A large part of our customers have bought from us more than once, or referred us to family and friends.",
+    "value5Title": "Delivery to your door",
+    "value5Desc": "No need to come to us. We can deliver the car directly to your home — anywhere in the Czech Republic.",
+    "ctaTitle": "Looking for a reliable car?",
+    "ctaDesc": "Browse our current inventory or contact us. We'll be happy to help you find the right one.",
+    "ctaCars": "Car inventory",
+    "ctaContact": "Contact us"
+  },
+  "meta": {
+    "homeTitle": "Autobazar HK | Quality Used Cars Hradec Králové",
+    "homeDesc": "Family car dealership in Hradec Králové with over 25 years of experience. Verified used cars with warranty and service history.",
+    "carsTitle": "Car Inventory | Autobazar HK",
+    "carsDesc": "Browse our current selection of verified used cars in Hradec Králové.",
+    "aboutTitle": "About Us | Autobazar HK",
+    "aboutDesc": "Car dealership in Hradec Králové with over 25 years of experience. Learn more about our history and values.",
+    "contactTitle": "Contact | Autobazar HK",
+    "contactDesc": "Contact Autobazar HK in Hradec Králové. Phone, email, address and online contact form."
+  }
+}

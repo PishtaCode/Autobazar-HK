@@ -1,7 +1,8 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { Car } from "@/lib/types";
-import { Badge } from "@/components/ui/badge";
 import { Fuel, Gauge, Calendar, Settings } from "lucide-react";
 
 interface CarCardProps {
@@ -28,9 +29,10 @@ const fuelColors: Record<string, string> = {
 };
 
 export default function CarCard({ car }: CarCardProps) {
+  const t = useTranslations("carCard");
+
   return (
     <div className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col h-full">
-      {/* Image */}
       <div className="relative h-48 overflow-hidden bg-gray-100">
         <Image
           src={car.imageUrl}
@@ -54,7 +56,6 @@ export default function CarCard({ car }: CarCardProps) {
         </div>
       </div>
 
-      {/* Content */}
       <div className="p-4 flex flex-col flex-1">
         <h3 className="font-semibold text-gray-900 text-base leading-snug mb-3 line-clamp-2 min-h-[2.75rem]">
           {car.title}
@@ -87,7 +88,7 @@ export default function CarCard({ car }: CarCardProps) {
           rel="noopener noreferrer"
           className="block w-full text-center bg-orange-600 hover:bg-orange-700 text-white text-sm font-semibold py-2.5 rounded-xl transition-colors"
         >
-          Zobrazit detail
+          {t("viewDetail")}
         </a>
       </div>
     </div>

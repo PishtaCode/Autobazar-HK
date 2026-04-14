@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { Car } from "@/lib/types";
 import CarCard from "./CarCard";
@@ -12,6 +13,7 @@ interface CarGridProps {
 }
 
 export default function CarGrid({ cars }: CarGridProps) {
+  const t = useTranslations("carGrid");
   const [filtered, setFiltered] = useState<Car[]>(cars);
   const [visibleCount, setVisibleCount] = useState(9);
 
@@ -26,16 +28,15 @@ export default function CarGrid({ cars }: CarGridProps) {
     <div>
       <FilterBar cars={cars} onFilter={handleFilter} />
 
-      {/* Count */}
       <p className="text-sm text-gray-500 mb-6">
-        Nalezeno <span className="font-semibold text-gray-900">{filtered.length}</span> vozidel
+        {t("found", { count: filtered.length })}
       </p>
 
       {filtered.length === 0 ? (
         <div className="text-center py-20 text-gray-400">
           <CarIcon size={48} className="mx-auto mb-4 opacity-30" />
-          <p className="text-lg font-medium">Žádná vozidla neodpovídají filtrům</p>
-          <p className="text-sm mt-1">Zkuste upravit kritéria vyhledávání</p>
+          <p className="text-lg font-medium">{t("noResults")}</p>
+          <p className="text-sm mt-1">{t("noResultsHint")}</p>
         </div>
       ) : (
         <>
@@ -61,7 +62,7 @@ export default function CarGrid({ cars }: CarGridProps) {
                 onClick={() => setVisibleCount((v) => v + 9)}
                 className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-xl font-semibold transition-colors"
               >
-                Načíst další ({filtered.length - visibleCount} zbývá)
+                {t("loadMore", { count: filtered.length - visibleCount })}
               </button>
             </div>
           )}

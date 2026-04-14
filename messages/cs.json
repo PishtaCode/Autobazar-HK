@@ -1,0 +1,143 @@
+{
+  "nav": {
+    "home": "Domů",
+    "cars": "Nabídka vozů",
+    "about": "O nás",
+    "contact": "Kontaktujte nás"
+  },
+  "footer": {
+    "navTitle": "Navigace",
+    "contactTitle": "Kontakt",
+    "home": "Domů",
+    "cars": "Nabídka vozů",
+    "about": "O nás",
+    "contact": "Kontakt",
+    "copyright": "© 2025 Autobazar HK, s.r.o. Všechna práva vyhrazena."
+  },
+  "hero": {
+    "badge": "Certifikovaný prodejce · Hradec Králové",
+    "titleStart": "Kvalitní vozy pro",
+    "titleHighlight": "celou rodinu",
+    "description": "Rodinný autobazar v Hradci Králové s více než 25 lety zkušeností. Každý vůz prochází důkladnou technickou kontrolou. Nakupujte s jistotou.",
+    "guarantee": "Záruka na každý vůz · Servisní historie · Osobní přístup",
+    "ctaPrimary": "Prohlédnout nabídku",
+    "ctaSecondary": "Kontaktovat nás"
+  },
+  "trustBar": {
+    "yearsLabel": "let na trhu",
+    "yearsDesc": "Zkušenosti a tradice",
+    "carsLabel": "prodaných vozů",
+    "carsDesc": "Spokojení zákazníci",
+    "qualityLabel": "záruka kvality",
+    "qualityDesc": "Na každý vůz",
+    "ratingLabel": "hodnocení",
+    "ratingDesc": "Google recenze"
+  },
+  "aboutTeaser": {
+    "description": "Jsme rodinný podnik s více než 25 lety zkušeností v prodeji ojetých vozů. Zakládáme si na poctivosti, transparentnosti a dlouhodobém vztahu se zákazníky. Každé auto, které prodáváme, bychom koupili i pro vlastní rodinu.",
+    "highlight1": "Osobní přístup ke každému zákazníkovi",
+    "highlight2": "Důkladná technická kontrola každého vozu",
+    "highlight3": "Transparentní ceny bez skrytých poplatků",
+    "highlight4": "Pomoc s financováním a pojištěním",
+    "link": "Více o nás"
+  },
+  "reviews": {
+    "label": "Recenze zákazníků",
+    "title": "Co říkají naši zákazníci",
+    "source": "Google recenze"
+  },
+  "featuredCars": {
+    "label": "Aktuální nabídka",
+    "title": "Vybraná vozidla",
+    "viewAll": "Celá nabídka",
+    "cta": "Zobrazit všechna vozidla"
+  },
+  "carCard": {
+    "viewDetail": "Zobrazit detail"
+  },
+  "carGrid": {
+    "found": "Nalezeno {count} vozidel",
+    "noResults": "Žádná vozidla neodpovídají filtrům",
+    "noResultsHint": "Zkuste upravit kritéria vyhledávání",
+    "loadMore": "Načíst další ({count} zbývá)"
+  },
+  "filterBar": {
+    "title": "Filtry",
+    "reset": "Zrušit filtry",
+    "allBrands": "Všechny značky",
+    "year": "Rok výroby",
+    "priceFrom": "Cena od (Kč)",
+    "priceTo": "Cena do (Kč)",
+    "mileage": "Nájezd do..."
+  },
+  "contactForm": {
+    "title": "Kontaktní formulář",
+    "name": "Jméno a příjmení",
+    "nameRequired": "Zadejte prosím jméno",
+    "email": "Email",
+    "emailInvalid": "Neplatná emailová adresa",
+    "phone": "Telefon",
+    "message": "Zpráva",
+    "messageRequired": "Zpráva musí mít alespoň 10 znaků",
+    "namePlaceholder": "Jan Novák",
+    "emailPlaceholder": "jan@email.cz",
+    "phonePlaceholder": "+420 123 456 789",
+    "messagePlaceholder": "O jaký vůz máte zájem? Nebo nám napište jakýkoliv dotaz...",
+    "submit": "Odeslat zprávu",
+    "submitting": "Odesílám...",
+    "successTitle": "Zpráva odeslána!",
+    "successDesc": "Brzy se vám ozveme. Obvykle odpovídáme do 24 hodin.",
+    "sendAnother": "Odeslat další zprávu",
+    "errorMsg": "Nepodařilo se odeslat zprávu. Zkuste to prosím znovu nebo nás kontaktujte telefonicky."
+  },
+  "contactPage": {
+    "address": "Adresa",
+    "phone": "Telefon",
+    "email": "Email",
+    "hours": "Otevírací doba",
+    "appointmentOnly": "Pouze po telefonické domluvě!",
+    "closed": "Zavřeno",
+    "monday": "Pondělí",
+    "tuesday": "Úterý",
+    "wednesday": "Středa",
+    "thursday": "Čtvrtek",
+    "friday": "Pátek",
+    "saturday": "Sobota",
+    "sunday": "Neděle",
+    "mapTitle": "Kde nás najdete",
+    "streetViewTitle": "Pohled z ulice"
+  },
+  "aboutPage": {
+    "heroTitle": "Autobazar HK",
+    "storyTitle": "Kdo jsme",
+    "story1": "Prodeji aut se věnuji přes 25 let a za tu dobu jsem prodal stovky vozů zákazníkům z celé ČR a Evropy.",
+    "story2": "Ke každému zákazníkovi přistupuji stejně jako bych přistupoval k sobě. Auto si pořádně prohlédnu, řeknu co vím a nesnažím se prodat za každou cenu. Spousta lidí se ke mně vrací znovu, nebo pošle kamaráda, a to mi říká, že to dělám dobře.",
+    "story3": "Najdete mě na adrese Františka Halase 2196 v Hradci Králové. Zastavte se kdykoliv nebo zavolejte a domluvíme se.",
+    "valuesLabel": "Naše hodnoty",
+    "valuesTitle": "Proč si vybrat nás",
+    "value1Title": "Osobní přístup",
+    "value1Desc": "Nejsme velký řetězec. Jednáte přímo s majitelem, který vám řekne vše na rovinu.",
+    "value2Title": "Žádné překvapení",
+    "value2Desc": "Cena je cena. Každé auto před prodejem zkontrolujeme a dostanete přehled o jeho historii.",
+    "value3Title": "Auta, za která ručíme",
+    "value3Desc": "Neprodáváme nic, o čem bychom sami pochybovali. Když auto není v pořádku, prostě ho nenabídneme.",
+    "value4Title": "Spokojení zákazníci se vracejí",
+    "value4Desc": "Velká část našich zákazníků koupila u nás auto víckrát, nebo nás doporučila rodině a přátelům.",
+    "value5Title": "Doručení až k vám domů",
+    "value5Desc": "Nemusíte za námi jezdit. Auto vám na přání dovezeme přímo k domu — kamkoliv po Česku i Slovensku.",
+    "ctaTitle": "Hledáte spolehlivé auto?",
+    "ctaDesc": "Prohlédněte si naši aktuální nabídku nebo nás kontaktujte. Rádi vám pomůžeme najít to pravé.",
+    "ctaCars": "Nabídka vozů",
+    "ctaContact": "Kontaktovat nás"
+  },
+  "meta": {
+    "homeTitle": "Autobazar HK, s.r.o. | Kvalitní ojetá auta Hradec Králové",
+    "homeDesc": "Rodinný autobazar v Hradci Králové s více než 25 lety zkušeností. Nabízíme prověřené ojeté vozy s zárukou a servisní historií.",
+    "carsTitle": "Nabídka vozů | Autobazar HK",
+    "carsDesc": "Prohlédněte si naši aktuální nabídku prověřených ojetých vozů v Hradci Králové.",
+    "aboutTitle": "O nás | Autobazar HK",
+    "aboutDesc": "Autobazar v Hradci Králové s více než 25 lety zkušeností. Zjistěte více o naší historii a hodnotách.",
+    "contactTitle": "Kontakt | Autobazar HK",
+    "contactDesc": "Kontaktujte Autobazar HK v Hradci Králové. Telefon, email, adresa a online kontaktní formulář."
+  }
+}

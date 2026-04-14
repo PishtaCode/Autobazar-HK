@@ -1,0 +1,143 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "cars": "Fahrzeugangebot",
+    "about": "Über uns",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "navTitle": "Navigation",
+    "contactTitle": "Kontakt",
+    "home": "Startseite",
+    "cars": "Fahrzeugangebot",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "copyright": "© 2025 Autobazar HK, s.r.o. Alle Rechte vorbehalten."
+  },
+  "hero": {
+    "badge": "Zertifizierter Händler · Hradec Králové",
+    "titleStart": "Qualitätsfahrzeuge für",
+    "titleHighlight": "die ganze Familie",
+    "description": "Familiengeführter Autohandel in Hradec Králové mit über 25 Jahren Erfahrung. Jedes Fahrzeug wird einer gründlichen technischen Prüfung unterzogen. Kaufen Sie mit Sicherheit.",
+    "guarantee": "Garantie auf jedes Fahrzeug · Servicehistorie · Persönliche Betreuung",
+    "ctaPrimary": "Angebot ansehen",
+    "ctaSecondary": "Kontaktieren Sie uns"
+  },
+  "trustBar": {
+    "yearsLabel": "Jahre Erfahrung",
+    "yearsDesc": "Tradition & Kompetenz",
+    "carsLabel": "verkaufte Fahrzeuge",
+    "carsDesc": "Zufriedene Kunden",
+    "qualityLabel": "Qualitätsgarantie",
+    "qualityDesc": "Auf jedes Fahrzeug",
+    "ratingLabel": "Bewertung",
+    "ratingDesc": "Google-Rezensionen"
+  },
+  "aboutTeaser": {
+    "description": "Wir sind ein familiengeführtes Unternehmen mit über 25 Jahren Erfahrung im Gebrauchtwagenhandel. Wir legen Wert auf Ehrlichkeit, Transparenz und langfristige Kundenbeziehungen. Jedes Auto, das wir verkaufen, würden wir auch für unsere eigene Familie kaufen.",
+    "highlight1": "Persönliche Betreuung jedes Kunden",
+    "highlight2": "Gründliche technische Inspektion jedes Fahrzeugs",
+    "highlight3": "Transparente Preise ohne versteckte Kosten",
+    "highlight4": "Hilfe bei Finanzierung und Versicherung",
+    "link": "Mehr über uns"
+  },
+  "reviews": {
+    "label": "Kundenbewertungen",
+    "title": "Was unsere Kunden sagen",
+    "source": "Google-Rezensionen"
+  },
+  "featuredCars": {
+    "label": "Aktuelles Angebot",
+    "title": "Ausgewählte Fahrzeuge",
+    "viewAll": "Gesamtes Angebot",
+    "cta": "Alle Fahrzeuge anzeigen"
+  },
+  "carCard": {
+    "viewDetail": "Details ansehen"
+  },
+  "carGrid": {
+    "found": "{count} Fahrzeuge gefunden",
+    "noResults": "Keine Fahrzeuge entsprechen den Filtern",
+    "noResultsHint": "Versuchen Sie, die Suchkriterien anzupassen",
+    "loadMore": "Weitere laden ({count} verbleibend)"
+  },
+  "filterBar": {
+    "title": "Filter",
+    "reset": "Filter zurücksetzen",
+    "allBrands": "Alle Marken",
+    "year": "Baujahr",
+    "priceFrom": "Preis ab (CZK)",
+    "priceTo": "Preis bis (CZK)",
+    "mileage": "Kilometerstand bis..."
+  },
+  "contactForm": {
+    "title": "Kontaktformular",
+    "name": "Vor- und Nachname",
+    "nameRequired": "Bitte geben Sie Ihren Namen ein",
+    "email": "E-Mail",
+    "emailInvalid": "Ungültige E-Mail-Adresse",
+    "phone": "Telefon",
+    "message": "Nachricht",
+    "messageRequired": "Die Nachricht muss mindestens 10 Zeichen lang sein",
+    "namePlaceholder": "Max Mustermann",
+    "emailPlaceholder": "max@email.de",
+    "phonePlaceholder": "+420 123 456 789",
+    "messagePlaceholder": "Für welches Fahrzeug interessieren Sie sich? Oder stellen Sie uns eine beliebige Frage...",
+    "submit": "Nachricht senden",
+    "submitting": "Wird gesendet...",
+    "successTitle": "Nachricht gesendet!",
+    "successDesc": "Wir melden uns bald bei Ihnen. Wir antworten in der Regel innerhalb von 24 Stunden.",
+    "sendAnother": "Weitere Nachricht senden",
+    "errorMsg": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder kontaktieren Sie uns telefonisch."
+  },
+  "contactPage": {
+    "address": "Adresse",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "hours": "Öffnungszeiten",
+    "appointmentOnly": "Nur nach telefonischer Vereinbarung!",
+    "closed": "Geschlossen",
+    "monday": "Montag",
+    "tuesday": "Dienstag",
+    "wednesday": "Mittwoch",
+    "thursday": "Donnerstag",
+    "friday": "Freitag",
+    "saturday": "Samstag",
+    "sunday": "Sonntag",
+    "mapTitle": "So finden Sie uns",
+    "streetViewTitle": "Straßenansicht"
+  },
+  "aboutPage": {
+    "heroTitle": "Autobazar HK",
+    "storyTitle": "Wer wir sind",
+    "story1": "Ich beschäftige mich seit über 25 Jahren mit dem Autoverkauf und habe in dieser Zeit Hunderte von Fahrzeugen an Kunden aus der ganzen Tschechischen Republik und Europa verkauft.",
+    "story2": "Ich behandle jeden Kunden so, wie ich selbst behandelt werden möchte. Ich inspiziere jedes Auto gründlich, sage alles was ich weiß und versuche nicht um jeden Preis zu verkaufen. Viele Menschen kommen wieder zu mir oder schicken einen Freund, und das sagt mir, dass ich es richtig mache.",
+    "story3": "Sie finden mich unter der Adresse Františka Halase 2196 in Hradec Králové. Kommen Sie jederzeit vorbei oder rufen Sie an, um einen Termin zu vereinbaren.",
+    "valuesLabel": "Unsere Werte",
+    "valuesTitle": "Warum uns wählen",
+    "value1Title": "Persönliche Betreuung",
+    "value1Desc": "Wir sind keine große Kette. Sie handeln direkt mit dem Inhaber, der Ihnen alles offen sagt.",
+    "value2Title": "Keine Überraschungen",
+    "value2Desc": "Der Preis ist der Preis. Wir überprüfen jedes Auto vor dem Verkauf und Sie erhalten einen vollständigen Fahrzeughistorienbericht.",
+    "value3Title": "Fahrzeuge, für die wir bürgen",
+    "value3Desc": "Wir verkaufen nichts, woran wir selbst zweifeln würden. Wenn ein Auto nicht in Ordnung ist, bieten wir es einfach nicht an.",
+    "value4Title": "Zufriedene Kunden kommen wieder",
+    "value4Desc": "Ein großer Teil unserer Kunden hat bei uns mehr als einmal ein Auto gekauft oder uns Familie und Freunden empfohlen.",
+    "value5Title": "Lieferung bis vor Ihre Haustür",
+    "value5Desc": "Sie müssen nicht zu uns kommen. Wir liefern das Auto auf Wunsch direkt zu Ihnen nach Hause — überall in der Tschechischen Republik.",
+    "ctaTitle": "Suchen Sie ein zuverlässiges Auto?",
+    "ctaDesc": "Schauen Sie sich unser aktuelles Angebot an oder kontaktieren Sie uns. Wir helfen Ihnen gerne, das Richtige zu finden.",
+    "ctaCars": "Fahrzeugangebot",
+    "ctaContact": "Kontaktieren Sie uns"
+  },
+  "meta": {
+    "homeTitle": "Autobazar HK | Qualitäts-Gebrauchtwagen Hradec Králové",
+    "homeDesc": "Familiengeführter Autohandel in Hradec Králové mit über 25 Jahren Erfahrung. Geprüfte Gebrauchtwagen mit Garantie und Servicehistorie.",
+    "carsTitle": "Fahrzeugangebot | Autobazar HK",
+    "carsDesc": "Durchsuchen Sie unser aktuelles Angebot an geprüften Gebrauchtwagen in Hradec Králové.",
+    "aboutTitle": "Über uns | Autobazar HK",
+    "aboutDesc": "Autohandel in Hradec Králové mit über 25 Jahren Erfahrung. Erfahren Sie mehr über unsere Geschichte und Werte.",
+    "contactTitle": "Kontakt | Autobazar HK",
+    "contactDesc": "Kontaktieren Sie Autobazar HK in Hradec Králové. Telefon, E-Mail, Adresse und Online-Kontaktformular."
+  }
+}

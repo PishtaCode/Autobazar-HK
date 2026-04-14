@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import { Car } from "@/lib/types";
 import { SlidersHorizontal, X } from "lucide-react";
 
@@ -21,6 +22,7 @@ const inputClass =
 const selectClass = inputClass;
 
 export default function FilterBar({ cars, onFilter }: FilterBarProps) {
+  const t = useTranslations("filterBar");
   const [brand, setBrand] = useState("");
   const [year, setYear] = useState("");
   const [priceFrom, setPriceFrom] = useState("");
@@ -39,13 +41,11 @@ export default function FilterBar({ cars, onFilter }: FilterBarProps) {
 
   useEffect(() => {
     let filtered = cars;
-
     if (brand) filtered = filtered.filter((c) => c.brand === brand);
     if (year) filtered = filtered.filter((c) => c.year === parseInt(year));
     if (priceFrom) filtered = filtered.filter((c) => c.price >= parseInt(priceFrom));
     if (priceTo) filtered = filtered.filter((c) => c.price <= parseInt(priceTo));
     if (maxMileage) filtered = filtered.filter((c) => c.mileage <= parseInt(maxMileage));
-
     onFilter(filtered);
   }, [brand, year, priceFrom, priceTo, maxMileage, cars, onFilter]);
 
@@ -54,7 +54,7 @@ export default function FilterBar({ cars, onFilter }: FilterBarProps) {
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2 text-gray-700 font-semibold text-sm">
           <SlidersHorizontal size={16} className="text-orange-600" />
-          Filtry
+          {t("title")}
         </div>
         {hasFilters && (
           <button
@@ -62,32 +62,29 @@ export default function FilterBar({ cars, onFilter }: FilterBarProps) {
             className="flex items-center gap-1 text-xs text-gray-400 hover:text-orange-600 transition-colors"
           >
             <X size={13} />
-            Zrušit filtry
+            {t("reset")}
           </button>
         )}
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
-        {/* Brand */}
         <select value={brand} onChange={(e) => setBrand(e.target.value)} className={selectClass}>
-          <option value="">Všechny značky</option>
+          <option value="">{t("allBrands")}</option>
           {allBrands(cars).map((b) => (
             <option key={b} value={b}>{b}</option>
           ))}
         </select>
 
-        {/* Year */}
         <select value={year} onChange={(e) => setYear(e.target.value)} className={selectClass}>
-          <option value="">Rok výroby</option>
+          <option value="">{t("year")}</option>
           {years.map((y) => (
             <option key={y} value={y}>{y}</option>
           ))}
         </select>
 
-        {/* Price from */}
         <input
           type="number"
-          placeholder="Cena od (Kč)"
+          placeholder={t("priceFrom")}
           value={priceFrom}
           onChange={(e) => setPriceFrom(e.target.value)}
           min={0}
@@ -95,10 +92,9 @@ export default function FilterBar({ cars, onFilter }: FilterBarProps) {
           className={inputClass}
         />
 
-        {/* Price to */}
         <input
           type="number"
-          placeholder="Cena do (Kč)"
+          placeholder={t("priceTo")}
           value={priceTo}
           onChange={(e) => setPriceTo(e.target.value)}
           min={0}
@@ -106,9 +102,8 @@ export default function FilterBar({ cars, onFilter }: FilterBarProps) {
           className={inputClass}
         />
 
-        {/* Max mileage */}
         <select value={maxMileage} onChange={(e) => setMaxMileage(e.target.value)} className={selectClass}>
-          <option value="">Nájezd do...</option>
+          <option value="">{t("mileage")}</option>
           <option value="50000">50 000 km</option>
           <option value="100000">100 000 km</option>
           <option value="150000">150 000 km</option>

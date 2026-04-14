@@ -3,20 +3,27 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useTranslations } from "next-intl";
 import { z } from "zod";
 import { Send, CheckCircle, AlertCircle } from "lucide-react";
 
-const schema = z.object({
-  name: z.string().min(2, "Zadejte prosím jméno"),
-  email: z.string().email("Neplatná emailová adresa"),
-  phone: z.string().optional(),
-  message: z.string().min(10, "Zpráva musí mít alespoň 10 znaků"),
-});
-
-type FormData = z.infer<typeof schema>;
+type FormData = {
+  name: string;
+  email: string;
+  phone?: string;
+  message: string;
+};
 
 export default function ContactForm() {
+  const t = useTranslations("contactForm");
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+
+  const schema = z.object({
+    name: z.string().min(2, t("nameRequired")),
+    email: z.string().email(t("emailInvalid")),
+    phone: z.string().optional(),
+    message: z.string().min(10, t("messageRequired")),
+  });
 
   const {
     register,
@@ -54,15 +61,13 @@ export default function ContactForm() {
         <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-4">
           <CheckCircle size={28} className="text-green-600" />
         </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-2">Zpráva odeslána!</h3>
-        <p className="text-gray-500 text-sm mb-6">
-          Brzy se vám ozveme. Obvykle odpovídáme do 24 hodin.
-        </p>
+        <h3 className="text-xl font-bold text-gray-900 mb-2">{t("successTitle")}</h3>
+        <p className="text-gray-500 text-sm mb-6">{t("successDesc")}</p>
         <button
           onClick={() => setStatus("idle")}
           className="text-orange-600 hover:text-orange-700 font-medium text-sm"
         >
-          Odeslat další zprávu
+          {t("sendAnother")}
         </button>
       </div>
     );
@@ -70,13 +75,15 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+      <h2 className="text-xl font-bold text-gray-900 mb-6">{t("title")}</h2>
+
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1.5">
-          Jméno a příjmení *
+          {t("name")} *
         </label>
         <input
           {...register("name")}
-          placeholder="Jan Novák"
+          placeholder={t("namePlaceholder")}
           className={inputClass(!!errors.name)}
         />
         {errors.name && (
@@ -86,12 +93,12 @@ export default function ContactForm() {
 
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1.5">
-          Email *
+          {t("email")} *
         </label>
         <input
           {...register("email")}
           type="email"
-          placeholder="jan@email.cz"
+          placeholder={t("emailPlaceholder")}
           className={inputClass(!!errors.email)}
         />
         {errors.email && (
@@ -101,24 +108,24 @@ export default function ContactForm() {
 
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1.5">
-          Telefon
+          {t("phone")}
         </label>
         <input
           {...register("phone")}
           type="tel"
-          placeholder="+420 123 456 789"
+          placeholder={t("phonePlaceholder")}
           className={inputClass(false)}
         />
       </div>
 
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1.5">
-          Zpráva *
+          {t("message")} *
         </label>
         <textarea
           {...register("message")}
           rows={5}
-          placeholder="O jaký vůz máte zájem? Nebo nám napište jakýkoliv dotaz..."
+          placeholder={t("messagePlaceholder")}
           className={inputClass(!!errors.message)}
         />
         {errors.message && (
@@ -129,7 +136,7 @@ export default function ContactForm() {
       {status === "error" && (
         <div className="flex items-center gap-2 text-red-600 bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-sm">
           <AlertCircle size={16} />
-          Nepodařilo se odeslat zprávu. Zkuste to prosím znovu nebo nás kontaktujte telefonicky.
+          {t("errorMsg")}
         </div>
       )}
 
@@ -141,12 +148,12 @@ export default function ContactForm() {
         {status === "sending" ? (
           <>
             <span className="animate-spin w-4 h-4 border-2 border-white border-t-transparent rounded-full" />
-            Odesílám...
+            {t("submitting")}
           </>
         ) : (
           <>
             <Send size={16} />
-            Odeslat zprávu
+            {t("submit")}
           </>
         )}
       </button>

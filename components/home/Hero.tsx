@@ -1,13 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { ArrowRight, Shield, Star } from "lucide-react";
 
 export default function Hero() {
+  const t = useTranslations("hero");
+
   return (
     <section className="relative min-h-[75vh] md:min-h-[90vh] flex items-center overflow-hidden bg-gray-900">
-      {/* Background — Mazda CX-5 at night */}
       <div
         className="absolute inset-0 bg-no-repeat"
         style={{
@@ -21,7 +23,6 @@ export default function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Left — text */}
           <div className="max-w-xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -30,7 +31,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 bg-orange-600/20 border border-orange-500/30 text-orange-400 px-4 py-1.5 rounded-full text-sm font-medium mb-4 md:mb-6"
             >
               <Star size={14} className="fill-orange-400" />
-              Certifikovaný prodejce · Hradec Králové
+              {t("badge")}
             </motion.div>
 
             <motion.h1
@@ -39,8 +40,8 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 md:mb-6"
             >
-              Kvalitní vozy pro{" "}
-              <span className="text-orange-500">celou rodinu</span>
+              {t("titleStart")}{" "}
+              <span className="text-orange-500">{t("titleHighlight")}</span>
             </motion.h1>
 
             <motion.p
@@ -49,8 +50,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-base md:text-lg text-gray-300 mb-6 md:mb-8 leading-relaxed"
             >
-              Rodinný autobazar v Hradci Králové s více než 25 lety zkušeností.
-              Každý vůz prochází důkladnou technickou kontrolou. Nakupujte s jistotou.
+              {t("description")}
             </motion.p>
 
             <motion.div
@@ -60,7 +60,7 @@ export default function Hero() {
               className="flex items-center gap-2 text-gray-300 text-sm mb-6 md:mb-10"
             >
               <Shield size={16} className="text-green-400" />
-              <span>Záruka na každý vůz · Servisní historie · Osobní přístup</span>
+              <span>{t("guarantee")}</span>
             </motion.div>
 
             <motion.div
@@ -73,21 +73,19 @@ export default function Hero() {
                 href="/nabidka"
                 className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-6 py-3.5 rounded-xl font-semibold transition-all hover:scale-105 shadow-lg shadow-orange-600/30"
               >
-                Prohlédnout nabídku
+                {t("ctaPrimary")}
                 <ArrowRight size={18} />
               </Link>
               <Link
                 href="/kontakt"
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-6 py-3.5 rounded-xl font-semibold backdrop-blur-sm transition-all"
               >
-                Kontaktovat nás
+                {t("ctaSecondary")}
               </Link>
             </motion.div>
           </div>
-
         </div>
 
-        {/* Scroll indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -106,4 +104,3 @@ export default function Hero() {
     </section>
   );
 }
-

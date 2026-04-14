@@ -1,36 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Award, Car, Shield, ThumbsUp } from "lucide-react";
 
-const stats = [
-  {
-    icon: Award,
-    value: "25+",
-    label: "let na trhu",
-    desc: "Zkušenosti a tradice",
-  },
-  {
-    icon: Car,
-    value: "500+",
-    label: "prodaných vozů",
-    desc: "Spokojení zákazníci",
-  },
-  {
-    icon: Shield,
-    value: "100%",
-    label: "záruka kvality",
-    desc: "Na každý vůz",
-  },
-  {
-    icon: ThumbsUp,
-    value: "4.2★",
-    label: "hodnocení",
-    desc: "Google recenze",
-  },
-];
-
 export default function TrustBar() {
+  const t = useTranslations("trustBar");
+
+  const stats = [
+    { icon: Award, value: "25+", label: t("yearsLabel"), desc: t("yearsDesc") },
+    { icon: Car, value: "500+", label: t("carsLabel"), desc: t("carsDesc") },
+    { icon: Shield, value: "100%", label: t("qualityLabel"), desc: t("qualityDesc") },
+    { icon: ThumbsUp, value: "4.2★", label: t("ratingLabel"), desc: t("ratingDesc") },
+  ];
+
   return (
     <section className="bg-white border-b border-gray-100 py-8 md:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,17 +1,20 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Menu, X, Car } from "lucide-react";
-
-const navLinks = [
-  { href: "/", label: "Domů" },
-  { href: "/nabidka", label: "Nabídka vozů" },
-  { href: "/o-nas", label: "O nás" },
-];
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function Header() {
+  const t = useTranslations("nav");
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const navLinks = [
+    { href: "/", label: t("home") },
+    { href: "/nabidka", label: t("cars") },
+    { href: "/o-nas", label: t("about") },
+  ];
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
@@ -42,8 +45,9 @@ export default function Header() {
               href="/kontakt"
               className="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
             >
-              Kontaktujte nás
+              {t("contact")}
             </Link>
+            <LanguageSwitcher />
           </nav>
 
           {/* Mobile menu button */}
@@ -75,8 +79,11 @@ export default function Header() {
             className="bg-orange-600 text-white text-center py-2.5 rounded-lg font-semibold mt-2"
             onClick={() => setMenuOpen(false)}
           >
-            Kontaktujte nás
+            {t("contact")}
           </Link>
+          <div className="pt-1">
+            <LanguageSwitcher />
+          </div>
         </div>
       )}
     </header>

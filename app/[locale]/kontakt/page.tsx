@@ -1,48 +1,56 @@
 import { Fragment } from "react";
-import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import ContactForm from "@/components/contact/ContactForm";
 import MapEmbed from "@/components/contact/MapEmbed";
 
-export const metadata: Metadata = {
-  title: "Kontakt | Autobazar HK",
-  description: "Kontaktujte Autobazar HK v Hradci Králové. Telefon, email, adresa a online kontaktní formulář.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta" });
+  return { title: t("contactTitle"), description: t("contactDesc") };
+}
 
-const info = [
-  {
-    icon: MapPin,
-    label: "Adresa",
-    value: "Františka Halase 2196\nNový Hradec Králové\n500 09 Hradec Králové",
-  },
-  {
-    icon: Phone,
-    label: "Telefon",
-    value: "+420 602 405 744",
-    href: "tel:+420602405744",
-  },
-  {
-    icon: Mail,
-    label: "Email",
-    value: "autobazarhk@seznam.cz",
-    href: "mailto:autobazarhk@seznam.cz",
-  },
-  {
-    icon: Clock,
-    label: "Otevírací doba",
-    hours: [
-      { day: "Pondělí", time: "9:00–17:00" },
-      { day: "Úterý",   time: "9:00–17:00" },
-      { day: "Středa",  time: "9:00–17:00" },
-      { day: "Čtvrtek", time: "9:00–17:00" },
-      { day: "Pátek",   time: "9:00–17:00" },
-      { day: "Sobota",  time: "9:00–12:00" },
-      { day: "Neděle",  time: "Zavřeno" },
-    ],
-  },
-];
+export default async function KontaktPage() {
+  const t = await getTranslations("contactPage");
 
-export default function KontaktPage() {
+  const info = [
+    {
+      icon: MapPin,
+      label: t("address"),
+      value: "Františka Halase 2196\nNový Hradec Králové\n500 09 Hradec Králové",
+    },
+    {
+      icon: Phone,
+      label: t("phone"),
+      value: "+420 602 405 744",
+      href: "tel:+420602405744",
+    },
+    {
+      icon: Mail,
+      label: t("email"),
+      value: "autobazarhk@seznam.cz",
+      href: "mailto:autobazarhk@seznam.cz",
+    },
+    {
+      icon: Clock,
+      label: t("hours"),
+      hours: [
+        { day: t("monday"), time: "9:00–17:00" },
+        { day: t("tuesday"), time: "9:00–17:00" },
+        { day: t("wednesday"), time: "9:00–17:00" },
+        { day: t("thursday"), time: "9:00–17:00" },
+        { day: t("friday"), time: "9:00–17:00" },
+        { day: t("saturday"), time: "9:00–12:00" },
+        { day: t("sunday"), time: t("closed") },
+      ],
+    },
+  ];
+
   return (
     <div className="bg-gray-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
@@ -52,7 +60,12 @@ export default function KontaktPage() {
             {info.map((item, idx) => {
               const Icon = item.icon;
               return (
-                <div key={item.label} className={`bg-white rounded-2xl p-5 border border-gray-100 shadow-sm flex gap-4 ${idx === info.length - 1 ? "flex-1" : ""}`}>
+                <div
+                  key={item.label}
+                  className={`bg-white rounded-2xl p-5 border border-gray-100 shadow-sm flex gap-4 ${
+                    idx === info.length - 1 ? "flex-1" : ""
+                  }`}
+                >
                   <div className="w-10 h-10 bg-orange-50 rounded-xl flex items-center justify-center shrink-0">
                     <Icon size={18} className="text-orange-600" />
                   </div>
@@ -62,7 +75,9 @@ export default function KontaktPage() {
                     </div>
                     {"hours" in item && item.hours ? (
                       <>
-                        <p className="text-base text-orange-600 font-bold mb-2">Pouze po telefonické domluvě!</p>
+                        <p className="text-base text-orange-600 font-bold mb-2">
+                          {t("appointmentOnly")}
+                        </p>
                         <div className="grid grid-cols-2 gap-x-4 gap-y-1">
                           {item.hours.map(({ day, time }) => (
                             <Fragment key={day}>
@@ -73,7 +88,10 @@ export default function KontaktPage() {
                         </div>
                       </>
                     ) : item.href ? (
-                      <a href={item.href} className="text-gray-800 font-medium hover:text-orange-600 transition-colors">
+                      <a
+                        href={item.href}
+                        className="text-gray-800 font-medium hover:text-orange-600 transition-colors"
+                      >
                         {item.value}
                       </a>
                     ) : (
@@ -83,24 +101,22 @@ export default function KontaktPage() {
                 </div>
               );
             })}
-
-            </div>
+          </div>
 
           {/* Form */}
           <div className="lg:col-span-3 bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-6">Kontaktní formulář</h2>
             <ContactForm />
           </div>
         </div>
 
-        {/* Mapa + Street View vedle sebe */}
+        {/* Mapa + Street View */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 md:gap-8 mt-4 md:mt-8">
           <div className="lg:col-span-2 bg-white rounded-2xl border border-gray-100 shadow-sm p-4">
-            <p className="text-sm font-semibold text-gray-700 mb-3">Kde nás najdete</p>
+            <p className="text-sm font-semibold text-gray-700 mb-3">{t("mapTitle")}</p>
             <MapEmbed className="h-56 md:h-80" />
           </div>
           <div className="lg:col-span-3 bg-white rounded-2xl border border-gray-100 shadow-sm p-4">
-            <p className="text-sm font-semibold text-gray-700 mb-3">Pohled z ulice</p>
+            <p className="text-sm font-semibold text-gray-700 mb-3">{t("streetViewTitle")}</p>
             <div className="rounded-xl overflow-hidden border border-gray-200 h-56 md:h-80">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!4v1680000000000!6m8!1m7!1s0iiWHntjG7CN0tWbnoz7eA!2m2!1d50.2000957!2d15.8446989!3f153.12!4f5.55!5f90"

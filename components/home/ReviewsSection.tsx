@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Star } from "lucide-react";
 
 const reviews = [
@@ -35,6 +36,8 @@ function Stars({ count }: { count: number }) {
 }
 
 export default function ReviewsSection() {
+  const t = useTranslations("reviews");
+
   return (
     <section className="py-12 md:py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,18 +49,16 @@ export default function ReviewsSection() {
           className="text-center mb-8 md:mb-12"
         >
           <p className="text-orange-600 text-sm font-semibold uppercase tracking-wider mb-2">
-            Recenze zákazníků
+            {t("label")}
           </p>
-          <h2 className="text-3xl font-bold text-gray-900">
-            Co říkají naši zákazníci
-          </h2>
+          <h2 className="text-3xl font-bold text-gray-900">{t("title")}</h2>
           <div className="flex items-center justify-center gap-2 mt-3 text-gray-500 text-sm">
             <div className="flex gap-0.5">
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star key={i} size={16} className="fill-orange-400 text-orange-400" />
               ))}
             </div>
-            <span>4.2 / 5 · Google recenze</span>
+            <span>4.2 / 5 · {t("source")}</span>
           </div>
         </motion.div>
 
