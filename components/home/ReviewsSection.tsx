@@ -9,19 +9,19 @@ const reviews = [
     name: "Hojdova K",
     date: "25. března 2026",
     rating: 5,
-    text: "Nejlepší prodejce, velmi milý a seriózní pan majitel, cesta 300km pro inzerované vozidlo se mi vyplatilo, jsem velmi spokojená.",
+    text: "Nejlepší prodejce, velmi milý a seriózní pan majitel, cesta 300km pro inzerované vozidlo se mi vyplatilo, jsem velmi spokojená. Nechala jsem své původní vozidlo na protiúčet, majitel nabídl seriózní výkupní cenu. Moc děkuji. Ráda se za pár let vrátím zpět. Kristýna H.",
   },
   {
-    name: "baron Erno",
-    date: "26. dubna 2025",
+    name: "Jakub Koldrt",
+    date: "6. dubna 2025",
     rating: 5,
-    text: "Vše naprosto super vřele doporučuji.",
+    text: "Nedávno jsem zde kupoval BMW, přístup profesionální a velice příjemný, auto v pořádku a hodnotím velikou ochotu a informovanost. Mohu jen doporučit.",
   },
   {
-    name: "Lenka Dostálová",
-    date: "před 5 lety",
+    name: "Martin Kovář",
+    date: "10. února 2025",
     rating: 5,
-    text: "S koupí auta i se samotným autem jsem moc spokojená :) Pan Vaněk je vstřícný a ochotný člověk, který nabízí hezké kousky ve svém autobazaru.",
+    text: "Překvapil nás velmi milý, lidský, upřímný a ochotný přístup pana bazarníka, který prodávanému autu technicky i uživatelsky velmi rozuměl a sdělil nám všechny pro proti daného vozu a věnoval nám čas včetně projížďky po okolí. Mohu doporučit.",
   },
 ];
 
@@ -58,7 +58,7 @@ export default function ReviewsSection() {
                 <Star key={i} size={16} className="fill-orange-400 text-orange-400" />
               ))}
             </div>
-            <span>4.8 / 5 · {t("source")}</span>
+            <span>4.3 / 5 · 39 hodnocení · {t("source")}</span>
           </div>
         </motion.div>
 
