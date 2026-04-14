@@ -61,14 +61,17 @@ export default function KontaktPage() {
                       {item.label}
                     </div>
                     {"hours" in item && item.hours ? (
-                      <div className="grid grid-cols-2 gap-x-4 gap-y-0.5">
-                        {item.hours.map(({ day, time }) => (
-                          <Fragment key={day}>
-                            <span className="text-gray-700 font-medium text-sm">{day}</span>
-                            <span className="text-gray-700 text-sm">{time}</span>
-                          </Fragment>
-                        ))}
-                      </div>
+                      <>
+                        <div className="grid grid-cols-2 gap-x-4 gap-y-0.5">
+                          {item.hours.map(({ day, time }) => (
+                            <Fragment key={day}>
+                              <span className="text-gray-700 font-medium text-sm">{day}</span>
+                              <span className="text-gray-700 text-sm">{time}</span>
+                            </Fragment>
+                          ))}
+                        </div>
+                        <p className="text-xs text-orange-600 font-bold mt-4">Pouze po telefonické domluvě!</p>
+                      </>
                     ) : item.href ? (
                       <a href={item.href} className="text-gray-800 font-medium hover:text-orange-600 transition-colors">
                         {item.value}
