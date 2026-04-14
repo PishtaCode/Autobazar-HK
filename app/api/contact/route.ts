@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Autobazar HK web <noreply@autobazarhk.cz>",
+        from: "Autobazar HK web <noreply@autobazarhk.com>",
         to: [toEmail],
         reply_to: data.email,
         subject: `Nová zpráva z webu od ${data.name}`,
